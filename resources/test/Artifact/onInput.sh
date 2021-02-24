@@ -5,6 +5,8 @@ check_artifact_properties() {
   local intMasterName=$(eval echo "$"res_"$resourceName"_sourceArtifactory_masterName)
   local repositoryPath=$(find_resource_variable $resourceName repositoryPath)
   local artifactName=$(find_resource_variable $resourceName artifactName)
+  
+  echo "$intMasterName"
 
   if [ "$intMasterName" != "artifactory" ]; then
     echo "Error: Integration type not supported for this resource type."
