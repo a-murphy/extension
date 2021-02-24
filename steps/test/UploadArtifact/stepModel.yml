@@ -3,49 +3,33 @@ description: 'A step to upload an Artifact to JFrog Artifactory.'
 configuration:
   autoPublishBuildInfo:
     type: String
-    immutable: false
   xrayScan:
     type: String
-    immutable: false
   failOnScan:
     type: String
-    immutable: false
   sourcePath:
     type: String
-    immutable: false
   targetPath:
     type: String
-    immutable: false
   properties:
     type: String
-    immutable: false
   regExp:
     type: String
-    immutable: false
   flat:
     type: String
-    immutable: false
   module:
     type: String
-    immutable: false
   deb:
     type: String
-    immutable: false
   recursive:
     type: String
-    immutable: false
   dryRun:
     type: String
-    immutable: false
   symlinks:
     type: String
-    immutable: false
   explode:
     type: String
-    immutable: false
   includeDirs:
     type: String
-    immutable: false
   syncDeletes:
     type: String
-    immutable: false
