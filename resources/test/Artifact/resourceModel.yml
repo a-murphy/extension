@@ -10,7 +10,7 @@ configuration:
     type: String
     immutable: true
     validate:
-      isRegEx: '["^[^\*]*[^\/\*]$",\'i\']'
+      isRegEx: "^[^\*]*[^\/\*]$"
   artifactName:
     type: String
     immutable: false
