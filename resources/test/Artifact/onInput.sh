@@ -6,7 +6,10 @@ check_artifact_properties() {
   local repositoryPath=$(find_resource_variable $resourceName repositoryPath)
   local artifactName=$(find_resource_variable $resourceName artifactName)
   
+  echo "$resourceName"
   echo "$intMasterName"
+  echo "$repositoryPath"
+  echo "$artifactName"
 
   if [ "$intMasterName" != "artifactory" ]; then
     echo "Error: Integration type not supported for this resource type."
