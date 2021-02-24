@@ -1,0 +1,18 @@
+description: 'A resource to reference a single JFrog Artifactory Artifact.'
+
+configuration:
+  sourceArtifactory:
+    type: Integration
+    immutable: false
+    validate:
+      isIntegrationType: Artifactory
+  repositoryPath:
+    type: String
+    immutable: true
+    validate:
+      isRegEx: ["^[^\*]*[^\/\*]$",'i']
+  artifactName:
+    type: String
+    immutable: false
+    validate:
+      notContains: '*'
