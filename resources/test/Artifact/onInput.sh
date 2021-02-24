@@ -10,6 +10,8 @@ check_artifact_properties() {
   echo "$intMasterName"
   echo "$repositoryPath"
   echo "$artifactName"
+  
+  printenv
 
   if [ "$intMasterName" != "artifactory" ]; then
     echo "Error: Integration type not supported for this resource type."
