@@ -2,7 +2,7 @@
 
 check_artifact_properties() {
   local resourceName="$1"
-  local intMasterName=$(eval echo "$"res_"$resourceName"_sourceArtifactory_masterName)
+  local intMasterName=$(eval echo "$"res_"$resourceName"_int_masterName)
   local repositoryPath=$(find_resource_variable $resourceName repositoryPath)
   local artifactName=$(find_resource_variable $resourceName artifactName)
   
