@@ -2,11 +2,11 @@ description: 'A step to upload an Artifact to JFrog Artifactory.'
 
 configuration:
   autoPublishBuildInfo:
-    type: String
+    type: Boolean
   xrayScan:
-    type: String
+    type: Boolean
   failOnScan:
-    type: String
+    type: Boolean
   sourcePath:
     type: String
   targetPath:
@@ -16,20 +16,22 @@ configuration:
   regExp:
     type: String
   flat:
-    type: String
+    type: Boolean
   module:
     type: String
   deb:
     type: String
   recursive:
-    type: String
+    type: Boolean
   dryRun:
-    type: String
+    type: Boolean
   symlinks:
-    type: String
+    type: Boolean
   explode:
+    type: Boolean
+  exclusions:
     type: String
   includeDirs:
-    type: String
+    type: Boolean
   syncDeletes:
     type: String
