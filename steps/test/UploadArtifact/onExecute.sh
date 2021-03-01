@@ -108,6 +108,8 @@ upload_artifact() {
     parameters+=" --sync-deletes='${syncDeletes}'"
   fi
 
+  execute_command "ls"
+
   execute_command "\$jfrog_cli_path rt upload \"$sourcePath\" \"$targetPath\" $parameters --insecure-tls=$no_verify_ssl --fail-no-op=true --detailed-summary=true"
 
   local autoPublishBuildInfo=$(find_step_configuration_value autoPublishBuildInfo)
