@@ -35,7 +35,7 @@ upload_artifact() {
   local targetPath=$(find_step_configuration_value targetPath)
 
   if [ -z "$sourcePath" ]; then
-    sourcePath="."
+    sourcePath="*"
   fi
   if [ -z "$targetPath" ]; then
     execute_command "echo 'No targetPath found'"
@@ -107,8 +107,6 @@ upload_artifact() {
   if [ ! -z "$syncDeletes" ]; then
     parameters+=" --sync-deletes='${syncDeletes}'"
   fi
-
-  execute_command "ls"
 
   execute_command "\$jfrog_cli_path rt upload \"$sourcePath\" \"$targetPath\" $parameters --insecure-tls=$no_verify_ssl --fail-no-op=true --detailed-summary=true"
 
