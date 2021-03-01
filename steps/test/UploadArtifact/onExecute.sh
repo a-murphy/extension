@@ -10,6 +10,7 @@ upload_artifact() {
 
   execute_command "\$jfrog_cli_path rt use $integrationName"
 
+  execute_command "mkdir -p \"\$step_tmp_dir/ArtifactUpload\""
   execute_command "pushd \"\$step_tmp_dir/ArtifactUpload\""
 
   local fileSpecName=$(get_resource_name --type FileSpec --operation IN)
