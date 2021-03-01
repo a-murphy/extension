@@ -66,7 +66,7 @@ upload_artifact() {
     uploadProperties="${properties};"
   fi
   uploadProperties+="pipelines_step_name=${step_name};pipelines_run_number=${run_number};pipelines_step_id=${step_id};pipelines_pipeline_name=${pipeline_name};pipelines_step_url=${step_url};pipelines_step_type=${step_type};pipelines_step_platform=${step_platform}"
-  parameters+=" --target-props='${uploadProperties}'"
+  parameters+=" --props='${uploadProperties}'"
 
   if [ ! -z "$deb" ]; then
     parameters+=" --deb='${deb//\//\\\/}'"
