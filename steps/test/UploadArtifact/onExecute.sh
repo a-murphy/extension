@@ -16,19 +16,19 @@ upload_artifact() {
   local fileSpecName=$(get_resource_name --type FileSpec --operation IN)
   if [ ! -z "$fileSpecName" ]; then
     local resourcePath=$(find_resource_variable "$fileSpecName" resourcePath)
-    execute_command "cp -r \"${resourcePath}/*\" ."
+    execute_command "cp -r ${resourcePath}/* ."
   fi
 
   local remoteFileName=$(get_resource_name --type RemoteFile --operation IN)
   if [ ! -z "$remoteFileName" ]; then
     local resourcePath=$(find_resource_variable "$remoteFileName" resourcePath)
-    execute_command "cp -r \"${resourcePath}/*\" ."
+    execute_command "cp -r ${resourcePath}/* ."
   fi
 
   local gitRepoName=$(get_resource_name --type GitRepo --operation IN)
   if [ ! -z "$gitRepoName" ]; then
     local resourcePath=$(find_resource_variable "$gitRepoName" resourcePath)
-    execute_command "cp -r \"${resourcePath}/*\" ."
+    execute_command "cp -r ${resourcePath}/* ."
   fi
 
   local sourcePath=$(find_step_configuration_value sourcePath)
