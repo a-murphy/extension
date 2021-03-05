@@ -46,7 +46,7 @@ upload_artifact() {
   local regExp=$(find_step_configuration_value regExp)
   local flat=$(find_step_configuration_value flat)
   local module=$(find_step_configuration_value module)
-  local deb=$(find_step_configuration_value deb)
+  local deb="$(find_step_configuration_value deb)"
   local recursive=$(find_step_configuration_value recursive)
   local dryRun=$(find_step_configuration_value dryRun)
   local symlinks=$(find_step_configuration_value symlinks)
