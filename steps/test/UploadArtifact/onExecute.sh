@@ -58,7 +58,7 @@ upload_artifact() {
   local parameters=""
 
   if [ ! -z "$module" ]; then
-    parameters+=" --module='${module}'"
+    parameters+=" --module=${module}"
   fi
 
   local uploadProperties=""
@@ -69,7 +69,7 @@ upload_artifact() {
   parameters+=" --props='${uploadProperties}'"
 
   if [ ! -z "$deb" ]; then
-    parameters+=" --deb='${deb//\//\\\/}'"
+    parameters+=" --deb='${deb}'"
   fi
 
   if [ ! -z "$flat" ]; then
