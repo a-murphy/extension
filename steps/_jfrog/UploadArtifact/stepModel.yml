@@ -1,0 +1,37 @@
+description: 'A step to upload an Artifact to JFrog Artifactory.'
+
+configuration:
+  autoPublishBuildInfo:
+    type: Boolean
+  xrayScan:
+    type: Boolean
+  failOnScan:
+    type: Boolean
+  sourcePath:
+    type: String
+  targetPath:
+    type: String
+  properties:
+    type: String
+  regExp:
+    type: String
+  flat:
+    type: Boolean
+  module:
+    type: String
+  deb:
+    type: String
+  recursive:
+    type: Boolean
+  dryRun:
+    type: Boolean
+  symlinks:
+    type: Boolean
+  explode:
+    type: Boolean
+  exclusions:
+    type: String
+  includeDirs:
+    type: Boolean
+  syncDeletes:
+    type: String
