@@ -1,5 +1,5 @@
 description: 'A step to upload an Artifact to JFrog Artifactory.'
-platform: 
+platforms: 
   - os: Linux
   - os: Windows
 configuration:
